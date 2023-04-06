@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { View, Text, ScrollView, SafeAreaView } from "react-native";
+import { View, StatusBar, ScrollView, SafeAreaView } from "react-native";
 import { Stack, useRout, useRouter } from "expo-router";
 
 import { COLORS, SIZES, icons, images } from "../constants";
@@ -13,6 +13,9 @@ import {
 const Home = () => {
   const router = useRouter();
   const [searchQuery, setSearchQuery] = useState("");
+  if (Platform.OS == "ios") {
+    StatusBar.setBarStyle("dark-content", true); //<<--- add this
+  }
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite }}>

@@ -2,7 +2,6 @@ import { Stack } from "expo-router";
 import { useCallback } from "react";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
-import { StatusBar } from "expo-status-bar";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -23,7 +22,6 @@ const Layout = () => {
 
   return (
     <>
-      <StatusBar barStyle="dark-content" />
       <Stack onLayout={onLayoutRootView} />
     </>
   );

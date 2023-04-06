@@ -5,10 +5,10 @@ import { COLORS, FONT, SIZES } from "../../../constants";
 const styles = StyleSheet.create({
   container: {
     position: "absolute",
-    bottom: 0,
+    bottom: 10,
     left: 0,
     right: 0,
-    padding: SIZES.small,
+    padding: SIZES.large,
     backgroundColor: "#FFF",
     justifyContent: "space-between",
     alignItems: "center",

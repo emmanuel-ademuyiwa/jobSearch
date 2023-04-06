@@ -19,7 +19,7 @@ const Nearbyjobs = () => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerTitle}>Popular Jobs</Text>
+        <Text style={styles.headerTitle}>Nearby Jobs</Text>
         <TouchableOpacity>
           <Text style={styles.headerBtn}>Show all</Text>
         </TouchableOpacity>
@@ -29,7 +29,7 @@ const Nearbyjobs = () => {
         {isLoading ? (
           <ActivityIndicator size="large" colors={COLORS.primary} />
         ) : error ? (
-          <Text>Something went wrong</Text>
+          <Text style={{ color: COLORS.secondary }}>Something went wrong</Text>
         ) : (
           data?.map((job) => (
             <NearbyJobCard
